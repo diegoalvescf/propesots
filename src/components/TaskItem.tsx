@@ -11,7 +11,8 @@ type Props = {
 }
 
 export default function TaskItem({ item: task, handleToggleTaskCompletion, handleRemoveTask }: Props) {
-  const pesoBarra = 20;
+
+  const pesoBarra = task.barra;
   const cargaFinal = task.pct / 100 * task.carga;
   const cargaCadaLado = (cargaFinal - pesoBarra) / 2;
 
@@ -30,9 +31,12 @@ export default function TaskItem({ item: task, handleToggleTaskCompletion, handl
           />
           <span className="checkmark"></span>
         </label>
-        <p>{`PR: ${task.carga}kg (${task.pct}%)`}</p>
+        {/* <p>{`PR: ${task.carga}kg (${task.pct}%)`}</p>
         <p>{`Total: ${cargaFinal.toFixed(1)}kg`}</p>
-        <p>{`Cado lado: ${cargaCadaLado.toFixed(2)}kg`}</p>
+        <p>{`Cado lado: ${cargaCadaLado.toFixed(2)}kg`}</p> */}
+        <p>({task.pct}%)</p>
+        <p>{`Cado lado:${cargaCadaLado.toFixed(2)}kg`}</p>
+        <p>{`Barra de: ${pesoBarra}kg`}</p>
       </div>
 
       <button

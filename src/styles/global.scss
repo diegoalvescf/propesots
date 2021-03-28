@@ -1,3 +1,4 @@
+
 :root {
   --blue: #273FAD;
   --green: #3FAD27;
@@ -9,6 +10,18 @@
   --text-light: #A09CB1;
 }
 
+@media(max-width: 1080px) {
+  html {
+      font-size: 93.75%;
+  }
+}
+
+@media(max-width: 720px) {
+  html {
+      font-size: 87.5%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +29,7 @@
 }
 
 body {
-  font: 16px "Poppins", Arial, sans-serif;
+  font: 13px "Poppins", Arial, sans-serif;
   color: #121214;
 }
 
@@ -25,7 +38,7 @@ input, textarea {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1125px;
   margin: 0 auto;
   padding: 2.5rem 1rem;
 }
